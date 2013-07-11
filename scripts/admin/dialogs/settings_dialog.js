@@ -9,7 +9,7 @@
      * @param {Object=} options
      */
     refinery.Object.create({
-        objectPrototype: refinery.n('admin.Dialog', {
+        objectPrototype: refinery('admin.Dialog', {
             title: t('refinery.admin.settings_dialog_title'),
             url: '/refinery/dialogs/settings'
         }, true),

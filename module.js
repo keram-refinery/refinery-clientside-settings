@@ -1,4 +1,4 @@
-/*jslint maxlen: 140 */
+/*jslint maxlen: 140, unused: false */
 
 var dir = __dirname,
     scripts_dir = dir + '/scripts',
@@ -8,17 +8,13 @@ var dir = __dirname,
     build_dir = '../refinerycms-settings/app/assets',
     grunt = {
         'watch' : [{
-            'base_js' : {
-                'files': [scripts_dir + '/*.js'],
-                'tasks': ['closureCompiler:refinery-settings_base_js', 'concat:refinery-settings_base_js', 'copy:refinery-settings_js']
-            },
             'admin_js' : {
                 'files': [scripts_dir + '/admin/{,*/}*.js'],
                 'tasks': ['closureCompiler:refinery-settings_admin_js', 'concat:refinery-settings_admin_js', 'copy:refinery-settings_js']
             },
             'styles' : {
                 'files': [styles_dir + '/{,*/}*.css', styles_dir + '/{,*/}*.css.scss'],
-                'tasks': ['copy:refinery-settings_styles']
+                'tasks': ['assetUrl:refinery-settings_styles', 'copy:refinery-settings_styles']
             }
         }],
         'closureCompiler': [{
@@ -67,8 +63,8 @@ var dir = __dirname,
                 'files': [{
                     'expand': true,
                     'dot': true,
-                    'cwd': styles_dir + '/',
-                    'dest': build_dir + '/stylesheets/refinery/',
+                    'cwd': dir + '/.tmp/assets/stylesheets/',
+                    'dest': build_dir + '/stylesheets/',
                     'src': [
                         '**'
                     ]
@@ -79,7 +75,7 @@ var dir = __dirname,
                 'files': [{
                     'expand': true,
                     'dot': true,
-                    'cwd': scripts_dir + '/i18n/',
+                    'cwd': dir + '/i18n/',
                     'dest': build_dir + '/javascripts/refinery/i18n/',
                     'src': [
                         '**'

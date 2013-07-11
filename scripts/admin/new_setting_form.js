@@ -40,20 +40,20 @@
             var that = this,
                 input_value_type = holder.find('#setting_form_value_type');
 
-            if (this.is('initialisable')) {
+            if (that.is('initialisable')) {
                 that.is('initialising', true);
-                that.holder = holder;
+                that.attach_holder(holder);
                 that.enable_value_type(input_value_type.find('option:selected').val());
 
                 input_value_type.on('change', function () {
                     that.enable_value_type(input_value_type.find('option:selected').val());
                 });
 
-                this.is({'initialised': true, 'initialising': false});
-                this.trigger('init');
+                that.is({'initialised': true, 'initialising': false});
+                that.trigger('init');
             }
 
-            return this;
+            return that;
         }
     });
 
@@ -68,7 +68,7 @@
         var setting_form = holder.find('#new_setting');
 
         if (setting_form.length > 0) {
-            refinery.n('admin.settings.NewSettingForm').init(setting_form);
+            refinery('admin.settings.NewSettingForm').init(setting_form);
         }
     };
 
