@@ -4,7 +4,7 @@
 
     /**
      * @constructor
-     * @class refinery.admin.NewSettingForm
+     * @class refinery.admin.settings.NewSettingForm
      * @extends {refinery.Object}
      */
     refinery.Object.create({

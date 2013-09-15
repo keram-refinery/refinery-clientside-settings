@@ -1,12 +1,12 @@
-(function () {
+(function (refinery) {
 
     'use strict';
 
     /**
      * @constructor
-     * @class refinery.admin.SettingsDialog
      * @extends {refinery.admin.Dialog}
      * @param {Object=} options
+     * @return {refinery.admin.settings.SettingsDialog}
      */
     refinery.Object.create({
         objectPrototype: refinery('admin.Dialog', {
@@ -19,4 +19,4 @@
         module: 'admin.settings'
     });
 
-}());
+}(refinery));

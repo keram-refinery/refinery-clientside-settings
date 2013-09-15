@@ -2,8 +2,8 @@
   "name": "refinery",
   "description": "RefineryCMS Settings Clientside",
   "version": "0.0.1",
-  "homepage": "https://github.com/keram-refinery/refinery-clientside-settings",
-  "bugs": "https://github.com/keram-refinery/refinery-clientside-settings/issues",
+  "homepage": "https://github.com/keram-refinery/refinerycms-settings",
+  "bugs": "https://github.com/keram-refinery/refinerycms-settings-clientside/issues",
   "author": {
     "name": "Marek L.",
     "email": "nospam.keram@gmail.com",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/keram-refinery/refinery-clientside-settings.git"
+    "url": "git://github.com/keram-refinery/refinerycms-settings-clientside.git"
   },
   "licenses": [{
     "type": "MIT",
