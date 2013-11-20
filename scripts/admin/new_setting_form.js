@@ -42,7 +42,7 @@
 
             if (that.is('initialisable')) {
                 that.is('initialising', true);
-                that.attach_holder(holder);
+                that.holder = holder;
                 that.enable_value_type(input_value_type.find('option:selected').val());
 
                 input_value_type.on('change', function () {
@@ -64,12 +64,12 @@
      * @param  {jQuery} holder
      * @return {undefined}
      */
-    refinery.admin.ui.settingsNewSettingForm = function (holder) {
-        var setting_form = holder.find('#new_setting');
-
-        if (setting_form.length > 0) {
-            refinery('admin.settings.NewSettingForm').init(setting_form);
-        }
+    refinery.admin.ui.settingsNewSettingForm = function (holder, ui) {
+        holder.find('#new_setting').each(function () {
+            ui.addObject(
+                refinery('admin.settings.NewSettingForm').init($(this))
+            );
+        });
     };
 
 }());
