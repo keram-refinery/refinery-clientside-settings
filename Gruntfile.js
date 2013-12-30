@@ -160,7 +160,7 @@ module.exports = function (grunt) {
                     'scripts/admin/new_setting_form.js',
                     'scripts/admin/dialogs/*.js'
                 ],
-                dest: '.tmp/assets/javascripts/settings.all.js'
+                dest: '.tmp/assets/javascripts/admin/settings/settings.all.js'
             }
         },
 
@@ -202,7 +202,7 @@ module.exports = function (grunt) {
                     'scripts/admin/new_setting_form.js',
                     'scripts/admin/dialogs/*.js'
                 ],
-                dest: '.tmp/assets/javascripts/settings.min.js'
+                dest: '.tmp/assets/javascripts/admin/settings/settings.min.js'
             }
         },
 
